@@ -26,6 +26,7 @@ After scraping is done, it has the following options
 6.	All the Uploaded Collections in Database are Displayed in the left side
 
 WORKING:
+
 Step1: Initially, I used the streamlit sidebar to gather the user's Keyword, Start date, End date, and Number of tweets. 
 
 Step 2: TwitterSearchScraper and TwitterHashtagScraper are given the aforementioned information. The complete scraped data is placed in a dataframe, which is then available for download in CSV or JSON format.
@@ -46,7 +47,7 @@ HOW TO RUN TWITTER SCRAPER IN YOUR MACHINE: open cmd:
 7.	C:\Users\mypc>streamlit run my_twitter_scraper.py
 8.	You can now view your Streamlit app in your browser.
 9.  Local URL: http://localhost:8501
-10.	12.	Network URL: http://192.168.107.230:8501
+10.	Network URL: http://192.168.107.230:8501
 
 After clicking on the above url you can see the app in your browser
 TWITTER SCRAPER STREAMLIT APP WORKING DEMO VIDEO
