@@ -2,7 +2,8 @@
 
 #Twitter-scraping-with-snscrape-and-streamlit
 
-APPLICATION LINK:  
+APPLICATION LINK:  https://ddg111088-twitterscrapping-2023-letest-newtwsc040423-fu1did.streamlit.app/
+
 Interative GUI using streamlit for twitter scraping
 REQUIRED SKILLS:
 1.	Python scripting
