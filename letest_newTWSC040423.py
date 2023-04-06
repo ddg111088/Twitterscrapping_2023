@@ -142,8 +142,7 @@ st.info("Total Tweets Scraped " + str(len(tweets_df)-1))
 filtered_df = dataframe_explorer(tweets_df) 
 if st.sidebar.button("Show Tweets"):
     st.write(tweets_df)
-
-st.dataframe(filtered_df, use_container_width=True)
+    st.dataframe(filtered_df, use_container_width=True)
     
    
 # DOWNLOAD AS CSV
