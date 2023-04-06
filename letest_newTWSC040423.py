@@ -48,7 +48,7 @@ end = st.sidebar.date_input("Select the end date", datetime.date(2023, 4, 1), ke
 tweet_c = st.sidebar.number_input("How many tweets to scrape", 0, 1000, 5)
 tweets_list = []
 
-st.info("DETAILS")
+st.subheader("DETAILS")
 if option == "Keyword":
     st.info("Keyword is " + word)
 else:
