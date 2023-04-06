@@ -27,9 +27,13 @@ After scraping is done, it has the following options
 
 WORKING:
 Step1: Initially, I used the streamlit sidebar to gather the user's Keyword, Start date, End date, and Number of tweets. 
+
 Step 2: TwitterSearchScraper and TwitterHashtagScraper are given the aforementioned information. The complete scraped data is placed in a dataframe, which is then available for download in CSV or JSON format.
+
 I added an additional choice. If unnecessary, streamlit_extras can be omitted.
+
 Step3: Using pymongo, the database link is made. If a user chooses to upload data, a new collection is made and the data is uploaded there.
+
 Step4: created a thorough overview of the user input that was displayed on its main page.
 
 HOW TO RUN TWITTER SCRAPER IN YOUR MACHINE: open cmd:
