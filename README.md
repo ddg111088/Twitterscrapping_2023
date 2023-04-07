@@ -24,7 +24,7 @@ After scraping is done, it has the following options
 3.	Upload data to DATABASE
 4.  Display All the Tweets scraped
 5.	Apply a filter based on the column
-6.	All the Uploaded Collections in Database are Displayed in the left side
+6.	All the Uploaded Collections in Database are Displayed on main page
 
 WORKING:
 
