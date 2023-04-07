@@ -51,4 +51,4 @@ HOW TO RUN TWITTER SCRAPER IN YOUR MACHINE: open cmd:
 12.	Network URL: http://192.168.107.230:8501
 
 After clicking on the above url you can see the app in your browser
-TWITTER SCRAPER STREAMLIT APP WORKING DEMO VIDEO
+TWITTER SCRAPER STREAMLIT APP WORKING DEMO VIDEO: https://www.linkedin.com/posts/dhananjay-gothankar-6a9007262_database-snscrape-python-activity-7049992229976686593--aUM?utm_source=share&utm_medium=member_desktop
