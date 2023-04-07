@@ -1,11 +1,12 @@
 import streamlit as st
 import snscrape.modules.twitter as sntwitter
+from streamlit_extras.dataframe_explorer import dataframe_explorer
 import pandas as pd
 import datetime
 import pymongo
 import time
 
-# REQUIRED VARIABLES
+# Background Effect
 
 page_bg_img = """
 <style>
@@ -27,6 +28,7 @@ background-size: cover;
 """
 makr = st.markdown(page_bg_img, unsafe_allow_html=True)
 
+
 # REQUIRED VARIABLES
 
 client = pymongo.MongoClient("mongodb://localhost:27017/")  # To connect to MONGODB
@@ -34,7 +36,7 @@ mydb = client["Twitter_Database"]  # To create a DATABASE
 tweets_df = pd.DataFrame()
 dfm = pd.DataFrame()
 st.write("# Twitter data scraping")
-abc = st.sidebar.title("#User input")
+abc = st.sidebar.title("#User input#")
 option = st.sidebar.selectbox(
     "How would you like the data to be searched?", ("Keyword", "Hashtag")
 )
@@ -46,7 +48,9 @@ end = st.sidebar.date_input("Select the end date", datetime.date(2023, 4, 1), ke
 tweet_c = st.sidebar.number_input("How many tweets to scrape", 0, 1000, 5)
 tweets_list = []
 
-st.info("DETAILS")
+# user Input_info
+
+st.subheader("DETAILS")
 if option == "Keyword":
     st.info("Keyword is " + word)
 else:
@@ -55,12 +59,14 @@ st.info("Starting Date is " + str(start))
 st.info("End Date is " + str(end))
 st.info("Number of Tweets " + str(tweet_c))
 
+#code
+
 if word:
     if option == "Keyword":
         for i, tweet in enumerate(
-                sntwitter.TwitterSearchScraper(
-                    f"{word} since:{start} until:{end}"
-                ).get_items()
+            sntwitter.TwitterSearchScraper(
+                f"{word} since:{start} until:{end}"
+            ).get_items()
         ):
             if i > tweet_c:
                 break
@@ -95,9 +101,9 @@ if word:
         )
     else:
         for i, tweet in enumerate(
-                sntwitter.TwitterHashtagScraper(
-                    f"{word} + since:{start} until:{end}"
-                ).get_items()
+            sntwitter.TwitterHashtagScraper(
+                f"{word} + since:{start} until:{end}"
+            ).get_items()
         ):
             if i > tweet_c:
                 break
@@ -133,12 +139,13 @@ if word:
 else:
     st.warning(option, " cant be empty")
 
-st.info("Total Tweets Scraped " + str(len(tweets_df) - 1))
+st.info("Total Tweets Scraped " + str(len(tweets_df)-1))
 
+filtered_df = dataframe_explorer(tweets_df)
 if st.sidebar.button("Show Tweets"):
-    st.write(tweets_df)
-
-
+    #st.write(tweets_df) 
+    st.dataframe(filtered_df, use_container_width=True)
+   
 # DOWNLOAD AS CSV
 @st.cache_data
 def convert_df(df):
@@ -187,10 +194,10 @@ st.subheader("Uploaded Datasets: ")
 
 for i in mydb.list_collection_names():
     mycollection = mydb[i]
-    # st.write(i, mycollection.count_documents({}))
+    #st.write(i, mycollection.count_documents({}))
     if st.button(i):
         dfm = pd.DataFrame(list(mycollection.find()))
 
 if not dfm.empty:
-    st.write(len(dfm), "Records Found")
+    st.write(len(dfm)-1, "Records Found")
     st.write(dfm)
