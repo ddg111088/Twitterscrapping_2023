@@ -2,7 +2,7 @@
 
 #Twitter-scraping-with-snscrape-and-streamlit
 
-APPLICATION LINK:  https://ddg111088-twitterscrapping-2023-letest-newtwsc040423-fu1did.streamlit.app/
+APPLICATION LINK:  https://ddg111088-twitterscrapping-2023-letest-newtwsc040423-ecmwzh.streamlit.app/
 
 Interative GUI using streamlit for twitter scraping
 REQUIRED SKILLS:
@@ -37,16 +37,18 @@ Step3: Using pymongo, the database link is made. If a user chooses to upload dat
 Step4: created a thorough overview of the user input that was displayed on its main page.
 
 HOW TO RUN TWITTER SCRAPER IN YOUR MACHINE: open cmd:
-1.	C:\Users\mypc> pip install streamlit
-2.	C:\Users\mypc> pip install streamlit.extras
-3.	C:\Users\mypc> pip install snscrape
-4.	C:\Users\mypc> pip install pandas
-5.	C:\Users\mypc> pip install pymongo
-6.	Using the Python IDE, write your code and run it.
-7.	C:\Users\mypc>streamlit run my_twitter_scraper.py
-8.	You can now view your Streamlit app in your browser.
-9.  Local URL: http://localhost:8501
-10.	Network URL: http://192.168.107.230:8501
+1. > C:\Users\mypc> pip install virtualenv 
+2. > C:\Users\mypc> virtualenv my_twitter_env
+3. > C:\Users\mypc> cd my_twitter_env
+4. > C:\Users\mypc\my_twitter_env> cd Scripts
+5. > C:\Users\mypc\my_twitter_env\Scripts>activate                    # It will activate the virtual environment
+6. > (my_twitter_env)  C:\Users\mypc\> mkdir TwitterScraper           #create a folder 
+7. > (my_twitter_env)  C:\Users\mypc\> cd TwitterScraper              # download the above files from this repository and place inside this folder
+8. > (my_twitter_env)  C:\Users\mypc\TwitterScraper> pip install -r requirements.txt       # it will install all the required modules in the environment
+9. > (my_twitter_env)  C:\Users\mypc\TwitterScraper> streamlit run letest_newTWSC040423.py   # Now run the app using streamlit
+10. > You can now view your Streamlit app in your browser.
+11.  Local URL: http://localhost:8501
+12.	Network URL: http://192.168.107.230:8501
 
 After clicking on the above url you can see the app in your browser
 TWITTER SCRAPER STREAMLIT APP WORKING DEMO VIDEO
